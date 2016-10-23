@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "main": "start.js",
   "repository": {
-    "url": "git+https://github.com/azz0r/react-base-kit.git",
+    "url": "git+https://github.com/azz0r/sainsburys-node-scraper.git",
     "type": "git"
   },
   "author": "azz0r",
