@@ -6,28 +6,22 @@ import setProductPageInformation from "./scripts/set-product-page-information"
 import totalUnitPrices from "./scripts/total-unit-prices"
 import getPriceFromString from "./scripts/get-price-from-string"
 import collection from './scripts/tests/stub.json'
+import config from './config.json'
 
-const url = "http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html"
 const log = console.log
-const filePath = "data/data.json"
-const cssPaths = {
-  titles: ".productInfo a",
-  urls: ".productInfo a",
-  unitPrices: ".pricePerUnit"
-}
 
-request(url, (error, response, body) => {
+request(config.scrapeUrl, (error, response, body) => {
   const $ = cheerio.load(body)
   let collection = []
 
   if (!error) {
     log(chalk.bgWhite.black("No error receieved, processing body"))
     let
-      titles = $(cssPaths.titles).text().split("\n"),
-      urls = $(cssPaths.urls).map((i, el) => {
+      titles = $(config.cssPaths.titles).text().split("\n"),
+      urls = $(config.cssPaths.urls).map((i, el) => {
         return $(el).attr("href").trim()
       }).toArray(),
-      unitPrices = $(cssPaths.unitPrices).map((i, el) => {
+      unitPrices = $(config.cssPaths.unitPrices).map((i, el) => {
         return $(el).text().trim()
       }).toArray()
 
@@ -52,7 +46,7 @@ request(url, (error, response, body) => {
             results: collection,
             total: totalUnitPrices(collection)
           }
-          writeFile(filePath, writtenResult)
+          writeFile(config.storagePath, writtenResult)
         })
       log(chalk.bgYellow.black.bold('Collection: '),
         chalk.bgWhite.black(collection))
