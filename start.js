@@ -51,6 +51,6 @@ request(config.scrapeUrl, (error, response, body) => {
       log(chalk.bgYellow.black.bold('Collection: '),
         chalk.bgWhite.black(collection))
   } else {
-    log(chalk.red.inverse(`Failed to write data file ${err}`))
+    log(chalk.red.inverse(`Failed to write data file ${error}`))
   }
 })
