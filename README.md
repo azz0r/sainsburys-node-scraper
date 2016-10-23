@@ -13,6 +13,8 @@ Sainsburys test
 * Results are written in `data/data.json` after the process finishes
 * Bluebird & request are handling data fetching and promises
 * Mocha and chai are used for test running
+* Tested on node 6.8.1 (stable) and 5.12.0
+* Written data file: [click here](https://raw.githubusercontent.com/azz0r/sainsburys-node-scraper/master/data/data.json)
 
 ### 💪 <a name="installing">Installing</a>
 ```node
