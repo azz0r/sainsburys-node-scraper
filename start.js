@@ -9,7 +9,7 @@ import collection from './scripts/tests/stub.json'
 
 const url = "http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html"
 const log = console.log
-const dataPath = "data/data.json"
+const filePath = "data/data.json"
 
 request(url, (error, response, body) => {
   const $ = cheerio.load(body)
@@ -18,15 +18,13 @@ request(url, (error, response, body) => {
   if (!error) {
     log(chalk.bgWhite.black("No error receieved, processing body"))
     let
-      titles = $(".productInfo a").text(),
+      titles = $(".productInfo a").text().split("\n"),
       urls = $(".productInfo a").map((i, el) => {
         return $(el).attr("href").trim()
       }).toArray(),
       unitPrices = $(".pricePerUnit").map((i, el) => {
         return $(el).text().trim()
       }).toArray()
-
-      titles = titles.split("\n").filter((value) => {return value !== ""})
 
       // we use titles as our anchor
       titles
@@ -45,13 +43,11 @@ request(url, (error, response, body) => {
         })
       setProductPageInformation(collection)
         .then(() => {
-          writeFile(
-            dataPath,
-            {
-              results: collection,
-              total: totalUnitPrices(collection)
-            }
-          )
+          let writtenResult = {
+            results: collection,
+            total: totalUnitPrices(collection)
+          }
+          writeFile(filePath, writtenResult)
         })
       log(chalk.bgYellow.black(`Collection:`),
         chalk.bgWhite.black(collection))
