@@ -10,6 +10,11 @@ import collection from './scripts/tests/stub.json'
 const url = "http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html"
 const log = console.log
 const filePath = "data/data.json"
+const cssPaths = {
+  titles: ".productInfo a",
+  urls: ".productInfo a",
+  unitPrices: ".pricePerUnit"
+}
 
 request(url, (error, response, body) => {
   const $ = cheerio.load(body)
@@ -18,11 +23,11 @@ request(url, (error, response, body) => {
   if (!error) {
     log(chalk.bgWhite.black("No error receieved, processing body"))
     let
-      titles = $(".productInfo a").text().split("\n"),
-      urls = $(".productInfo a").map((i, el) => {
+      titles = $(cssPaths.titles).text().split("\n"),
+      urls = $(cssPaths.urls).map((i, el) => {
         return $(el).attr("href").trim()
       }).toArray(),
-      unitPrices = $(".pricePerUnit").map((i, el) => {
+      unitPrices = $(cssPaths.unitPrices).map((i, el) => {
         return $(el).text().trim()
       }).toArray()
 
@@ -49,7 +54,7 @@ request(url, (error, response, body) => {
           }
           writeFile(filePath, writtenResult)
         })
-      log(chalk.bgYellow.black(`Collection:`),
+      log(chalk.bgYellow.black.bold('Collection: '),
         chalk.bgWhite.black(collection))
   } else {
     log(chalk.red.inverse(`Failed to write data file ${err}`))
