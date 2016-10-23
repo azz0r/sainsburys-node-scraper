@@ -20,7 +20,7 @@ npm cache clean && npm install && npm run start
 ```
 
 ### 🚀 <a name="launching">Launching</a>
-* Run script `npm run start`
+Run script `npm run start`
 
 ### 📚 <a name="testing">Testing</a>
-* Test  `npm run test`
+Test  `npm run test`
