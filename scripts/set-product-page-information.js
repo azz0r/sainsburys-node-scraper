@@ -31,7 +31,7 @@ function setProductPageInformation(collection) {
         collection[key].description = $(".productText p").first().text()
         collection[key].size = bytesToSize(result.length)
       })
-      log(chalk.bgGreen.bold("Queued product pages complete"))
+      log(chalk.bgGreen.black("Queued product pages complete"))
       return collection
     })
     .catch((err) => {
