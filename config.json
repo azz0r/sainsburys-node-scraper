@@ -1,10 +1,9 @@
 {
-  "scrapeUrl": "http://network.wwe.com/video/v31356605",
+  "scrapeUrl": "http://network.wwe.com/shows/wwe",
   "storagePath": "data/data.json",
-  "cssPath": "#metaData",
-  "cssPaths": {
-    "showName": "#show-name",
-    "clipTitle": "#clipTitle",
-    "episodeDate": "#episode-date"
-  }
+  "cssPath": ".playlist-item",
+  "cssPaths": [{
+    "title": ".playlist-item h3",
+    "date": ".playlist-item .date"
+  }]
 }

@@ -6,7 +6,9 @@ const x = Xray().driver(phantom({webSecurity:false}))
 
 
 x(
-  config.scrapeUrl,
-  config.cssPath,
-  config.cssPaths)
-    .write('results.json')
+  config.scrapeUrl, {
+  items:
+    x(config.cssPath, config.cssPaths)
+  })
+  .limit(3)
+  .write('results.json')

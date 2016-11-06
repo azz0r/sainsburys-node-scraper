@@ -1,5 +1,100 @@
 {
-  "showName": "Survivor Series",
-  "clipTitle": "WWE Survivor Series 2001",
-  "episodeDate": "November 18, 2001"
+  "items": [
+    {
+      "title": "RAW Talk Hell In A Cell 2016",
+      "date": "October 30, 2016"
+    },
+    {
+      "title": "WWE Hell In A Cell 2016",
+      "date": "October 30, 2016"
+    },
+    {
+      "title": "WWE Hell In A Cell 2016 Kickoff",
+      "date": "October 30, 2016"
+    },
+    {
+      "title": "Talking Smack No Mercy 2016",
+      "date": "October 9, 2016"
+    },
+    {
+      "title": "WWE No Mercy 2016",
+      "date": "October 9, 2016"
+    },
+    {
+      "title": "WWE No Mercy 2016 Kickoff",
+      "date": "October 9, 2016"
+    },
+    {
+      "title": "WWE Clash Of Champions 2016",
+      "date": "September 25, 2016"
+    },
+    {
+      "title": "Clash Of Champions 2016 Kickoff",
+      "date": "September 25, 2016"
+    },
+    {
+      "title": "WWE Backlash 2016",
+      "date": "September 11, 2016"
+    },
+    {
+      "title": "WWE Backlash 2016 Kickoff",
+      "date": "September 11, 2016"
+    },
+    {
+      "title": "WWE SummerSlam 2016",
+      "date": "August 21, 2016"
+    },
+    {
+      "title": "WWE SummerSlam 2016 Kickoff",
+      "date": "August 21, 2016"
+    },
+    {
+      "title": "WWE Battleground 2016",
+      "date": "July 24, 2016"
+    },
+    {
+      "title": "WWE Battleground 2016 Kickoff",
+      "date": "July 24, 2016"
+    },
+    {
+      "title": "WWE Money In The Bank 2016",
+      "date": "June 19, 2016"
+    },
+    {
+      "title": "Money In The Bank 2016 Kickoff",
+      "date": "June 19, 2016"
+    },
+    {
+      "title": "WWE Extreme Rules 2016",
+      "date": "May 22, 2016"
+    },
+    {
+      "title": "WWE Extreme Rules 2016 Kickoff",
+      "date": "May 21, 2016"
+    },
+    {
+      "title": "WWE Payback 2016",
+      "date": "May 1, 2016"
+    },
+    {
+      "title": "WWE Payback 2016 Kickoff",
+      "date": "May 1, 2016"
+    },
+    {
+      "title": "WrestleMania 32",
+      "date": "April 3, 2016"
+    },
+    {
+      "title": "WrestleMania 32 Kickoff",
+      "date": "April 3, 2016"
+    },
+    {
+      "title": "WWE Fastlane 2016",
+      "date": "February 21, 2016"
+    },
+    {
+      "title": "WWE Fastlane 2016 Kickoff",
+      "date": "February 21, 2016"
+    }
+  ]
 }
