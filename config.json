@@ -1,9 +1,10 @@
 {
-  "scrapeUrl": "http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html",
+  "scrapeUrl": "http://network.wwe.com/video/v31356605",
   "storagePath": "data/data.json",
+  "cssPath": "#metaData",
   "cssPaths": {
-    "titles": ".productInfo a",
-    "urls": ".productInfo a",
-    "unitPrices": ".pricePerUnit"
+    "showName": "#show-name",
+    "clipTitle": "#clipTitle",
+    "episodeDate": "#episode-date"
   }
 }

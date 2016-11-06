@@ -28,7 +28,10 @@
     "mocha": "^3.1.2",
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
-    "watch": "^1.0.1"
+    "watch": "^1.0.1",
+    "weak": "^1.0.1",
+    "x-ray": "^2.3.1",
+    "x-ray-phantom": "^1.0.1"
   },
   "bugs": {
     "url": "https://github.com/azz0r/sainsburys-node-scraper/issues"
