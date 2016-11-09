@@ -6,9 +6,11 @@ const x = Xray().driver(phantom({webSecurity:false}))
 
 
 x(
-  config.scrapeUrl, {
-  items:
-    x(config.cssPath, config.cssPaths)
-  })
-  .limit(3)
-  .write('results.json')
+  config.scrapeUrl,
+  {
+    shows: x('#all-shows', {title: ['option'], 'value': ['option@value']}),
+    showsItems: x(config.cssPath, config.cssPaths)
+  }
+)
+.limit(3)
+.write('results.json')
